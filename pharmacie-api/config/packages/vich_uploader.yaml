@@ -1,0 +1,39 @@
+# config/packages/vich_uploader.yaml
+
+vich_uploader:
+    db_driver: orm
+    metadata:
+        type: attribute
+
+    mappings:
+        ProductCategory:
+            uri_prefix: /images/category_images
+            upload_destination: '%kernel.project_dir%/public/images/category_images'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+        Prescription:
+            uri_prefix: /images/prescription_images
+            upload_destination: '%kernel.project_dir%/public/images/prescription_images'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+        Product:
+            uri_prefix: /images/product_images
+            upload_destination: '%kernel.project_dir%/public/images/product_images'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
+
+        Pharmacy:
+            uri_prefix: /images/pharmacy_images
+            upload_destination: '%kernel.project_dir%/public/images/pharmacy_images'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true
