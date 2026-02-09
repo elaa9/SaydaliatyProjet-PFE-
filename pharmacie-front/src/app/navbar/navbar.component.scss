@@ -1,0 +1,157 @@
+/* You can add global styles to this file, and also import other style files */
+
+        /* Google Font Import - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500; 600; 700&display=swap');
+
+        *{
+        font-family: 'Poppins', sans-serif;
+        margin:0;
+        padding: 0;
+        box-sizing:border-box;
+        }
+
+        :root {
+            --body-color:#69bfee;
+            --sidebar-color: #FFF;
+            --primary-color:#69bfee;
+            --primary-color-light:#F6F5FF;
+            --text-color: #000000;
+
+            --tran-02: all 0.2s ease;
+            --tran-03: all 0.3s ease;
+            --tran-04: all 0.4s ease;
+            --tran-05: all 0.5s ease;
+
+        }
+        body{
+
+            height: 100vh;
+            background: var(--body-color);
+            transition: var(--tran-05);
+
+        }
+
+        .sidebar .text{
+          font-size: 17px;
+          font-weight: 600;
+          color: var(--text-color);
+          transition: var(--tran-03);
+          white-space: nowrap;
+          opacity: 1;
+      }
+
+        .sidebar
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 200px;
+            width: 290px;
+            padding:15px;
+            background: var(--sidebar-color);
+            transition: var(--tran-05);
+            z-index: 100;
+        }
+
+
+        .sidebar li {
+          height: 50px;
+          margin-top: 10px;
+          list-style: none;
+          display: flex;
+          align-items: center;
+        }
+
+        .sidebar li .icon{
+          min-width: 30px;
+          font-size: 20px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+        }
+
+        i{
+          min-width: 60px;
+          font-size:30px;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          color: var(--text-color);
+          transition: var(--tran-03);
+        }
+
+        .sidebar li .icon,.sidebar li .text{
+          color: var(--text-color);
+          transition: var(--tran-03);
+        }
+
+        .sidebar header{
+            position: relative;
+
+        }
+        /* Adjust the logo image size */
+        .image img {
+          max-width: 60%; /* Ensure the image does not exceed its container */
+          max-height: 60%; /* Ensure the image does not exceed its container */
+          width: auto;
+          height: auto;
+          border-radius: 6px;
+          margin-left: 60px;
+        }
+
+        /* Center the logo within the header */
+        .sidebar header .image {
+          display: flex;
+          align-items: center;
+        }
+
+
+        .sidebar li a{
+          height: 100%;
+          width: 100%;
+          display: flex;
+          text-decoration: none;
+          align-items: center;
+          border-radius: 6px;
+          transition: var(--tran-04);
+        }
+
+        .sidebar li a:hover {
+          background: var(--primary-color);
+        }
+
+
+        .sidebar .menu-bar{
+          height: calc(100% - 50px);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        .main {
+          width: calc(100% - 300px);
+          position: relative;
+          margin-left: 300px;
+          transition: margin-left 0.3s ease;
+          padding: 10px;
+        }
+
+        .home {
+          width: calc(100% - 290px);
+          position: relative;
+          left: 290px;
+          background-color: var(--body-color);
+          transition: var(--tran-05);
+        }
+
+        .home .text{
+          font-size: 30px;
+          font-weight: 500;
+          color: var(--text-color);
+          padding: 20px ;
+        }
+
+        h1 ,p
+        {
+          color: #64748B;
+        }

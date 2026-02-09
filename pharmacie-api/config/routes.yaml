@@ -1,0 +1,41 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+# user_index:
+#     path: /users
+#     controller: App\Controller\UserController::indexUsers
+#     methods: GET
+user_profile:
+    path: /api/user/profile
+    controller: App\Controller\UserController::userProfile
+    methods: GET
+user_create:
+    path: /users/create
+    controller: App\Controller\UserController::create
+    methods: POST
+# api_login:
+#     path: /login
+#     controller: App\Controller\LoginController::login
+#     methods: POST
+# api_login_customer:
+#     path: /api/login/customer
+#     controller: App\Controller\LoginController::loginCustomer
+#     methods: POST
+# api_login_delivery:
+#     path: /api/login/delivery
+#     controller: App\Controller\LoginController::loginDelivery
+#     methods: POST
+# api_login_pharmacist:
+#     path: /api/login/pharmacist
+#     controller: App\Controller\LoginController::loginPharmacist
+#     methods: POST
+# api_login_Adminpharmacist:
+#     path: /api/login/adminPharmacy
+#     controller: App\Controller\LoginController::loginAdminPharmacy
+#     methods: POST
+# api_customers_index:
+#     path: /api/customers
+#     controller: App\Controller\CustomerApiController::index
+#     methods: GET

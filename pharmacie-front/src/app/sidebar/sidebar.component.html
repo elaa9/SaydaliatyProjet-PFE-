@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PharmacieFront</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<nav class="sidebar">
+  <header>
+    <span class="image">
+      <img src="assets/images/logo.png">
+    </span>
+  </header>
+
+  <br/>
+
+  <div class="menu-bar">
+    <div class="menu">
+        <ul class="menu-links">
+        <p>Main Menu</p>
+          <li class="nav-link">
+            <a routerLink="/dashboard">
+              <i class='bx bx-home-alt icon' ></i>
+              <span class="text nav-text">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <a routerLink="/profile">
+              <i class='bx bxs-user icon' ></i>
+              <span class="text nav-text">Profile</span>
+            </a>
+          </li>
+
+          <li class="nav-link">
+            <!-- <a [routerLink]="['/edit-profile', app.user.id]"> -->
+              <i class='bx bxs-edit-alt icon' ></i>
+              <span class="text nav-text">Modifier Profile</span>
+            <!-- </a> -->
+          </li>
+
+          <li class="nav-link">
+             <!-- <a [routerLink]="['/change-password', app.user.id]"> -->
+              <i class='bx bx-key icon' ></i>
+              <span class="text nav-text">Changer Mot de passe</span>
+            <!-- </a> -->
+          </li>
+        </ul>
+      <hr/>
+
+      <ul class="menu-links">
+        <li class="nav-link">
+            <a routerLink="/customer">
+                <i class='bx bxs-user-detail icon'></i>
+                <span class="text nav-text">Clients</span>
+            </a>
+        </li>
+
+        <li class="nav-link">
+            <a routerLink="/pharmacy">
+                <i class='bx bx-plus-medical icon'></i>
+                <span class="text nav-text">Pharmacies</span>
+            </a>
+        </li>
+
+        <li class="nav-link">
+            <a routerLink="/order">
+                <i class='bx bxs-capsule icon'></i>
+                <span class="text nav-text">Commandes</span>
+            </a>
+        </li>
+
+        <li class="nav-link">
+            <a routerLink="/delivery">
+                <i class='bx bxs-truck icon'></i>
+                <span class="text nav-text">Livreurs</span>
+            </a>
+        </li>
+
+        <li class="nav-link">
+            <a routerLink="/product-category">
+                <i class='bx bxs-category icon'></i>
+                <span class="text nav-text">Catégories Produits</span>
+            </a>
+        </li>
+    </ul>
+    <hr/>
+
+    <ul class="menu-links">
+        <li class="nav-link">
+            <a routerLink="/logout">
+                <i class='bx bx-log-out icon'></i>
+                <span class="text nav-text">Se Déconnecter</span>
+            </a>
+        </li>
+    </ul>
+
+
+    </div>
+  </div>
+</nav>
+</html>
