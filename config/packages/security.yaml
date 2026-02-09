@@ -1,0 +1,56 @@
+security:
+    password_hashers:
+        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+    
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: email
+        admin_pharmacy_provider:
+            entity:
+                class: App\Entity\AdminPharmacy
+                property: email
+    
+    firewalls:
+        login:
+            pattern: ^/api/login
+            stateless: true
+            json_login:
+                check_path: /api/login_check
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+                provider: app_user_provider
+        
+        admin_pharmacy_login:
+            pattern: ^/api/admin_pharmacy/login
+            stateless: true
+            json_login:
+                check_path: /api/admin_pharmacy/login_check
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+                provider: admin_pharmacy_provider
+        
+        api:
+            pattern: ^/api
+            stateless: true
+            jwt:
+                provider: app_user_provider
+        
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+    
+    access_control:
+        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api/admin_pharmacy/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/api, roles: [ROLE_ADMIN_PHARMACY, ROLE_ADMIN] }
+
+when@test:
+    security:
+        password_hashers:
+            Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface:
+                algorithm: auto
+                cost: 4
+                time_cost: 3
+                memory_cost: 10
